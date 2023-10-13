@@ -1,0 +1,1566 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+nav {
+  background: skyblue;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 65px;
+  line-height: 65px;
+}
+
+nav .header {
+  position: relative;
+  max-width: 1250px;
+  padding: 0 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.header .nav-links {
+  display: inline-flex;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 9px 15px;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.nav-links li a:hover {
+  background: blue;
+}
+
+.nav-links .drop-menu {
+  background: skyblue;
+  width: 100px;
+  top: 65px;
+  line-height: 45px;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-links li:hover .drop-menu {
+  top: 65px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.nav-links .drop-menu li a {
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+}
+
+.mega-box {
+  position: absolute;
+  top: 80px;
+  background: skyblue;
+  width: 100%;
+  left: 0;
+  padding: 0 30px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mega-box .info {
+  background: skyblue;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.info .row {
+  line-height: 45px;
+}
+
+.info header {
+  color: blueviolet;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.info .row .mega-links {
+  margin-left: -40px;
+  border-left: 2px solid rgba(255, 255, 255, 0.578);
+}
+
+.info .row:nth-child(1), .info .row:nth-child(2) {
+  border-left: 0px;
+}
+
+.row .mega-links li {
+  padding: 0 20px;
+}
+
+.row .mega-links li a {
+  padding: 0 20px;
+  color: white;
+  font-size: 17px;
+  display: block;
+}
+
+.nav-links li:hover .mega-box {
+  top: 80px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+
+.nav-links .mobile-item {
+  display: none;
+}
+
+.header input {
+  display: none;
+}
+
+.header .btn {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.header .btn .cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.container {
+  width: 100%;
+}
+
+.blog-section {
+  width: 85%;
+  margin: 20px auto;
+}
+
+.blog-section .title {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+
+.blog-section .title h2 {
+  font-size: 27px;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: black;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+
+.blog-section .title p {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #7e7e7e;
+  margin-top: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  margin: 25px auto;
+}
+
+.cards .card {
+  width: 100%;
+  position: relative;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 15px 20px;
+}
+
+.content h4 {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  font-weight: 500;
+}
+
+.content p {
+  color: #7e7e7e;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.card .posted-date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  background-color: #ada62b;
+  padding: 6px 15px;
+}
+
+.card .posted-date p {
+  font-size: 14px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.post-container {
+  margin-top: 35px;
+  padding: 0 10px;
+}
+
+.post-container .post {
+  width: 280px;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.post-container .post .blog-image img {
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-container .post .blog-content {
+  padding: 0 20px;
+}
+
+.post-container .post .blog-content .date {
+  margin: 10px 0;
+  font-size: 15px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #666;
+}
+
+.post-container .post .blog-content .blog-title {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.post-container .post:hover .blog-title {
+  color: blue;
+  cursor: pointer;
+}
+
+.post-container .post .blog-content .remember {
+  font-size: 14px;
+  padding: 5px 0;
+  color: #666;
+}
+
+.post-container .post .blog-content .link {
+  display: block;
+  color: tomato;
+  margin-top: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.post-container .post .blog-content .link:hover {
+  color: blue;
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.testimonial {
+  padding: 30px 100px;
+}
+
+article h1 {
+  font-size: 28px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+article h2 {
+  font-size: 24px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+blockquote p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px;
+  margin-top: 0px;
+  color: black;
+  padding: 6px 40px;
+}
+
+.mines blockquote p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 19px;
+  margin-top: 0px;
+  color: black;
+  padding: 8px 40px;
+}
+
+.main {
+  margin: 10px;
+}
+
+.main .title h1 {
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.main .title p {
+  font-size: 17px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0px 10px;
+}
+
+.main .title .yes {
+  font-size: 17px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 0px 32px;
+}
+
+.main .card_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+}
+
+.card_container .card {
+  max-width: 379px;
+  margin-top: 70px;
+  border-radius: 20px;
+  background: #1e293b;
+  border: 0.5px solid #f1f5f9;
+  padding: 15px;
+  color: #f1f5f9;
+  position: relative;
+}
+
+.card .img_box {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  z-index: 555;
+}
+
+.card .img_box img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.user_content .name {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.user_content .post {
+  font-size: 15px;
+  color: #6e77d3;
+  font-weight: 300;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+  margin: 15px 0;
+  left: 16px;
+}
+
+.user_content .post::before {
+  content: "";
+  height: 1px;
+  width: 15px;
+  background: #6c77d3;
+  position: absolute;
+  top: 50%;
+  left: -16px;
+}
+
+.user_content .about {
+  color: #cbd5e1;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+.card .round_box {
+  position: absolute;
+  top: -20%;
+  right: 10%;
+  background: #1e293b !important;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #1e293b;
+  border-radius: 50%;
+  z-index: 333;
+}
+
+.card .squarebox {
+  height: 6px;
+  width: 6px;
+  background: #1e293b;
+  position: absolute;
+  top: 0;
+  right: 9%;
+  z-index: 444;
+}
+
+.heading {
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  padding: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+.words {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  padding: 0px 20px;
+}
+
+.video_container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 15px 20px 5%;
+  min-height: 100vh;
+}
+
+.video_container .main-video {
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.video_container .main-video iframe {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.video_container .main-video .title {
+  color: black;
+  font-size: 23px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.video_container .video-list {
+  background: #fff;
+  border-radius: 5px;
+  height: 520px;
+  overflow-y: scroll;
+}
+
+.video_container .video-list::-webkit-scrollbar {
+  width: 7px;
+}
+
+.video_container .video-list::-webkit-scrollbar-track {
+  background: #ccc;
+  border-radius: 50px;
+}
+
+.video_container .video-list::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 50px;
+}
+
+.video_container .video-list .vid iframe {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.video_container .video-list .vid {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f7f7f7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.video_container .video-list .vid:hover {
+  background: #eee;
+}
+
+.video_container .video-list .vid.active {
+  background: skyblue;
+}
+
+.video_container .video-list .vid .title {
+  font-size: 17px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.contact {
+  position: relative;
+  min-height: 50vh;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contact-box {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .contact-box h2 {
+  font-size: 27px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  color: black;
+}
+
+.contact .contact-box p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.Container .contactInfo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.Container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.Container .contactInfo .box .text h3 {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.Container .contactInfo .box .text p {
+  display: flex;
+  margin-left: 20px;
+  font-size: 15px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  flex-direction: column;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.Contactform {
+  width: 50%;
+  padding: 40px;
+  background: skyblue;
+}
+
+.Contactform h2 {
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.Contactform .inputbox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Contactform .inputbox input, .Contactform .inputbox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.Contactform .inputbox span {
+  position: absolute;
+  left: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 5px 0;
+  font-size: 15px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: black;
+}
+
+.Contactform .inputbox input:focus ~ span, .Contactform .inputbox input:valid ~ span,
+.Contactform .inputbox textarea:focus ~ span, .Contactform .inputbox textarea:valid ~ span {
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.Contactform .inputbox input[type=submit] {
+  width: 100px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 20px;
+}
+
+.Contactform .inputbox input[type=submit]:hover {
+  background: blue;
+}
+
+.gallery-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.gallery img {
+  width: 100%;
+}
+
+.blog-container {
+  width: 96%;
+  max-width: 117rem;
+  margin: 0 auto;
+}
+
+.mass-container {
+  width: 96%;
+  max-width: 117rem;
+  margin: 0 auto;
+}
+
+.blog-hero {
+  max-width: 120rem;
+  height: 40rem;
+  background: url(../history\ cover.jpg) no-repeat center center/cover;
+  margin: 0rem auto;
+}
+
+main {
+  width: 100%;
+  max-width: 108rem;
+  background-color: aqua;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin-top: -9rem;
+  margin-bottom: 2em;
+}
+
+.mass-container main {
+  width: 100%;
+  max-width: 117rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 2em;
+  background: url(../history\ cover.jpg);
+}
+
+main h2 {
+  font-size: 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+main .profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+main .profile-container .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .profile-container .profile .img-container img {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 0.5rem;
+}
+
+main .profile-container .profile .blog-text {
+  margin: 0 1rem;
+  color: #5b5963;
+  font-size: 1.2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.profile .blog-text h3 {
+  text-transform: uppercase;
+}
+
+main .blog-content p {
+  margin: 1rem 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+main .blog-content h4 {
+  font-size: 19px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+main .blog-content .blog-img img {
+  width: 90%;
+  height: 35rem;
+}
+
+main .blog-content .blog1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+
+main blockquote {
+  margin: 1rem 0;
+  padding: 1rem 2.8rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  box-shadow: inset 0.5rem 0 0 #fd735a;
+  background-color: #f5f5f5;
+}
+
+main .blog-content .blog-button a {
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: skyblue;
+  padding: 7px 7px 7px;
+  border-radius: 20px;
+}
+
+main .blog-content .blog-button a:hover {
+  background: red;
+}
+
+#jumuiya-wrapper {
+  margin: 3em;
+  min-height: 100vh;
+}
+#jumuiya-wrapper .jumuiya-p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.jumuiya-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.jumuiya-header h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+.jumuiya-header #search {
+  background-color: skyblue;
+  border-radius: 20px;
+  width: 17em;
+  height: 2.5em;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  color: gray;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+.jumuiya-header input {
+  background-color: skyblue;
+}
+.jumuiya-header .ri-search-line {
+  margin-left: 7px;
+  margin-right: 5px;
+}
+
+#wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5em;
+}
+
+.jumuiya-container {
+  background-color: rgb(121, 200, 231);
+  border-radius: 20px;
+  padding: 2em;
+}
+.jumuiya-container h2 {
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.jumuiya-container p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 13.5px;
+  font-weight: 300;
+}
+.jumuiya-container button {
+  border-radius: 20px;
+  margin-top: 6px;
+  height: 1.7em;
+  width: 13em;
+  cursor: pointer;
+}
+.jumuiya-container button a {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: gray;
+}
+.jumuiya-container button:hover {
+  background: blue;
+}
+
+.ministries-box {
+  margin: 3em;
+  min-height: 100vh;
+}
+
+.contactus {
+  background: linear-gradient(90deg, #0e3959 0%, #0e3959 30%, #03a9f5 30%, #03a9f5 100%);
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
+  min-height: 100vh;
+}
+
+.contactus .contactus-title h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.form {
+  grid-area: form;
+}
+
+.info {
+  grid-area: info;
+}
+
+.map {
+  grid-area: map;
+}
+
+.contactme {
+  padding: 40px;
+  background: gray;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contactus-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 5fr 4fr;
+  grid-template-areas: "form info" "form map";
+  grid-gap: 20px;
+}
+
+.contactme h3 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.formBox {
+  position: relative;
+  width: 100%;
+}
+
+.formBox .row50 {
+  display: flex;
+  gap: 20px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.formBox .row100 .inputBox {
+  width: 100%;
+}
+
+.inputBox span {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.inputBox input {
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 12px;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.inputBox textarea {
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 12px;
+  outline: none;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+}
+
+.inputBox input[type=submit] {
+  background: #ff578b;
+  color: #fff;
+  font-size: 12px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 14px 15px;
+  max-width: 120px;
+}
+
+.info {
+  background: #0e3959;
+}
+
+.info h3 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.info .infoBox div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info .infoBox div span {
+  min-width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #18b7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info .infoBox div p {
+  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.info .infoBox div a {
+  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sci {
+  margin-top: 40px;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.sci li a {
+  color: #fff;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.sci li a:hover {
+  color: black;
+}
+
+.map {
+  padding: 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.team-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  padding: 40px;
+}
+
+.team-card .card-team {
+  width: 100%;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.team-card .card-team:hover {
+  background: #f3f3f3;
+  transition: 0.3s ease;
+}
+
+.team-card .card-team .team-image img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+}
+
+.team-card .card-team .team-content {
+  width: 100%;
+  text-align: center;
+}
+
+.team-card .card-team .team-content .jina, .nickname, .number {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+}
+
+.team-card .card-team .team-content .number {
+  color: gray;
+}
+
+.team-card .card-team .team-content .number .ri-phone-fill {
+  color: skyblue;
+  margin-right: 5px;
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
+.main-container {
+  width: 100%;
+  background-color: black;
+  position: absolute;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 6%;
+}
+
+.footer-top col {
+  flex-basis: 25%;
+  width: 100%;
+  padding: 10px;
+}
+
+.footer-top .col .head-title h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.footer-top .col .head-title h2::after {
+  content: "";
+  width: 10%;
+  height: 3px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.5s;
+}
+
+.footer-top .col .head-title h2:hover::after {
+  width: 20%;
+}
+
+.footer-top .col .content p {
+  font-size: 17px;
+  color: #8d99ae;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding: 5px 0px;
+}
+
+.footer-top .col .content ul li a {
+  text-decoration: none;
+  color: #8d99ae;
+  font-size: 14px;
+}
+
+.footer-top .col ul li a {
+  text-decoration: none;
+  color: #8d99ae;
+  font-size: 14px;
+}
+
+.footer-top .col .content ul li a:hover {
+  color: red;
+}
+
+.footer-top .col ul li a:hover {
+  color: red;
+}
+
+.footer-top .col .content ul li a i {
+  color: red;
+  margin-right: 5px;
+}
+
+.footer-top .col ul li a i {
+  color: red;
+  margin-right: 5px;
+}
+
+.footer-bottom {
+  padding: 15px 6%;
+  font-size: 14px;
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .team-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contactus {
+    background: #03a9f5;
+    padding: 20px;
+  }
+  .contactus-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "form" "info" "map";
+  }
+  .map {
+    min-height: 300px;
+  }
+  .formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  .inputBox {
+    width: 100%;
+  }
+  .contactme {
+    padding: 30px;
+  }
+  .map {
+    min-height: 300px;
+    padding: 0;
+  }
+  .header .btn {
+    display: block !important;
+  }
+  .header input {
+    display: none;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn {
+    display: none;
+  }
+  .nav-links::-webkit-scrollbar {
+    width: 0px;
+  }
+  .contact {
+    padding: 50px;
+  }
+  .Container {
+    flex-direction: column;
+  }
+  .Container .contactInfo {
+    margin-bottom: 40px;
+  }
+  .Container .contactInfo, .Contactform {
+    width: 100%;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .text-box {
+    width: 100%;
+    left: 15%;
+    top: 50%;
+    transform: translate(-15%, -50%);
+  }
+  .text-box h1 {
+    font-size: 34px;
+  }
+  .text-box p {
+    font-size: 16px;
+  }
+  .video_container {
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10px;
+  }
+  .header .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    background: skyblue;
+    display: block;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    line-height: 50px;
+    padding: 50px 10px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  .nav-links li {
+    margin: 15px 10px;
+  }
+  .nav-links li a {
+    padding: 0 20px;
+    display: block;
+    font-size: 15px;
+  }
+  .nav-links .drop-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    top: 65px;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu {
+    max-height: 100%;
+  }
+  #touchDrop:checked ~ .drop-menu {
+    max-height: 100%;
+  }
+  #tickDrop:checked ~ .drop-menu {
+    max-height: 100%;
+  }
+  .nav-links .drop-menu li {
+    margin: 0;
+  }
+  .nav-links .drop-menu li a {
+    font-size: 13px;
+    border-radius: 5px;
+  }
+  .nav-links .desktop-item {
+    display: none;
+  }
+  .nav-links .mobile-item {
+    display: block;
+    font-size: 15px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover {
+    background: blue;
+  }
+  .mega-box {
+    position: static;
+    top: 65px;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .info {
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .info .row:nth-child(1), .mega-box .info .row:nth-child(2) {
+    border-top: 0px;
+  }
+  #megaDrop:checked ~ .mega-box {
+    max-height: 100%;
+  }
+  .info .row .mega-links {
+    border-left: 0px;
+    padding-left: 0px;
+  }
+  .row .mega-links li {
+    margin: 0;
+  }
+  .row .mega-links li a {
+    font-size: 14px;
+  }
+  .info .row header {
+    font-size: 15px;
+  }
+  #wrapper-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .wrapper-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .jumuiya-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 2em;
+  }
+  .jumuiya-header h1 {
+    margin: 0.5em 0;
+    font-size: 27px;
+  }
+  .jumuiya-header #search {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .team-card {
+    grid-template-columns: 1fr;
+  }
+  #wrapper-grid {
+    grid-template-columns: 1fr;
+  }
+  .wrapper-grid {
+    grid-template-columns: 1fr;
+  }
+  .jumuiya-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 2em;
+  }
+  .jumuiya-header h1 {
+    margin: 0.5em 0;
+    font-size: 20px;
+  }
+  .jumuiya-header #search {
+    width: 100%;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .text-box {
+    width: 100%;
+    left: 10%;
+    top: 50%;
+    transform: translate(-10%, -40%);
+  }
+  .text-box h1 {
+    font-size: 28px;
+  }
+  .text-box p {
+    font-size: 14px;
+  }
+  .video_container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .text-box {
+    width: 100%;
+    left: 5%;
+    top: 50;
+    transform: translate(-5%, -30%);
+  }
+  .text-box h1 {
+    font-size: 22px;
+  }
+  .text-box p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 318px) {
+  .user_content .name {
+    margin-top: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
